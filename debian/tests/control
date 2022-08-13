@@ -1,0 +1,54 @@
+Test-Command: /usr/share/cargo/bin/cargo-auto-test smallvec 1.9.0 --all-targets --all-features
+Features: test-name=rust-smallvec:@
+Depends: dh-cargo (>= 18), librust-bincode-1+default-dev (>= 1.0.1-~~), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test smallvec 1.9.0 --all-targets --no-default-features --features arbitrary
+Features: test-name=librust-smallvec-dev:arbitrary
+Depends: dh-cargo (>= 18), librust-bincode-1+default-dev (>= 1.0.1-~~), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test smallvec 1.9.0 --all-targets --no-default-features --features const_generics
+Features: test-name=librust-smallvec-dev:const_generics
+Depends: dh-cargo (>= 18), librust-bincode-1+default-dev (>= 1.0.1-~~), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test smallvec 1.9.0 --all-targets --no-default-features --features const_new
+Features: test-name=librust-smallvec-dev:const_new
+Depends: dh-cargo (>= 18), librust-bincode-1+default-dev (>= 1.0.1-~~), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test smallvec 1.9.0 --all-targets 
+Features: test-name=librust-smallvec-dev:default
+Depends: dh-cargo (>= 18), librust-bincode-1+default-dev (>= 1.0.1-~~), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test smallvec 1.9.0 --all-targets --no-default-features --features may_dangle
+Features: test-name=librust-smallvec-dev:may_dangle
+Depends: dh-cargo (>= 18), librust-bincode-1+default-dev (>= 1.0.1-~~), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test smallvec 1.9.0 --all-targets --no-default-features --features serde
+Features: test-name=librust-smallvec-dev:serde
+Depends: dh-cargo (>= 18), librust-bincode-1+default-dev (>= 1.0.1-~~), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test smallvec 1.9.0 --all-targets --no-default-features --features specialization
+Features: test-name=librust-smallvec-dev:specialization
+Depends: dh-cargo (>= 18), librust-bincode-1+default-dev (>= 1.0.1-~~), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test smallvec 1.9.0 --all-targets --no-default-features --features union
+Features: test-name=librust-smallvec-dev:union
+Depends: dh-cargo (>= 18), librust-bincode-1+default-dev (>= 1.0.1-~~), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test smallvec 1.9.0 --all-targets --no-default-features --features write
+Features: test-name=librust-smallvec-dev:write
+Depends: dh-cargo (>= 18), librust-bincode-1+default-dev (>= 1.0.1-~~), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test smallvec 1.9.0 --all-targets --no-default-features
+Features: test-name=librust-smallvec-dev:
+Depends: dh-cargo (>= 18), librust-bincode-1+default-dev (>= 1.0.1-~~), @
+Restrictions: allow-stderr, skip-not-installable

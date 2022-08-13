@@ -1,0 +1,67 @@
+Source: rust-smallvec
+Section: rust
+Priority: optional
+Build-Depends: debhelper (>= 12),
+ dh-cargo (>= 25),
+ cargo:native <!nocheck>,
+ rustc:native <!nocheck>,
+ libstd-rust-dev <!nocheck>
+Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+Uploaders:
+ kpcyrd <git@rxv.cc>,
+ Wolfgang Silbermayr <wolfgang@silbermayr.at>
+Standards-Version: 4.5.1
+Vcs-Git: https://salsa.debian.org/rust-team/debcargo-conf.git [src/smallvec]
+Vcs-Browser: https://salsa.debian.org/rust-team/debcargo-conf/tree/master/src/smallvec
+Rules-Requires-Root: no
+
+Package: librust-smallvec-dev
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${misc:Depends},
+ librust-arbitrary-1+default-dev,
+ librust-serde-1-dev
+Provides:
+ librust-smallvec+arbitrary-dev (= ${binary:Version}),
+ librust-smallvec+const-generics-dev (= ${binary:Version}),
+ librust-smallvec+const-new-dev (= ${binary:Version}),
+ librust-smallvec+default-dev (= ${binary:Version}),
+ librust-smallvec+may-dangle-dev (= ${binary:Version}),
+ librust-smallvec+serde-dev (= ${binary:Version}),
+ librust-smallvec+specialization-dev (= ${binary:Version}),
+ librust-smallvec+union-dev (= ${binary:Version}),
+ librust-smallvec+write-dev (= ${binary:Version}),
+ librust-smallvec-1-dev (= ${binary:Version}),
+ librust-smallvec-1+arbitrary-dev (= ${binary:Version}),
+ librust-smallvec-1+const-generics-dev (= ${binary:Version}),
+ librust-smallvec-1+const-new-dev (= ${binary:Version}),
+ librust-smallvec-1+default-dev (= ${binary:Version}),
+ librust-smallvec-1+may-dangle-dev (= ${binary:Version}),
+ librust-smallvec-1+serde-dev (= ${binary:Version}),
+ librust-smallvec-1+specialization-dev (= ${binary:Version}),
+ librust-smallvec-1+union-dev (= ${binary:Version}),
+ librust-smallvec-1+write-dev (= ${binary:Version}),
+ librust-smallvec-1.9-dev (= ${binary:Version}),
+ librust-smallvec-1.9+arbitrary-dev (= ${binary:Version}),
+ librust-smallvec-1.9+const-generics-dev (= ${binary:Version}),
+ librust-smallvec-1.9+const-new-dev (= ${binary:Version}),
+ librust-smallvec-1.9+default-dev (= ${binary:Version}),
+ librust-smallvec-1.9+may-dangle-dev (= ${binary:Version}),
+ librust-smallvec-1.9+serde-dev (= ${binary:Version}),
+ librust-smallvec-1.9+specialization-dev (= ${binary:Version}),
+ librust-smallvec-1.9+union-dev (= ${binary:Version}),
+ librust-smallvec-1.9+write-dev (= ${binary:Version}),
+ librust-smallvec-1.9.0-dev (= ${binary:Version}),
+ librust-smallvec-1.9.0+arbitrary-dev (= ${binary:Version}),
+ librust-smallvec-1.9.0+const-generics-dev (= ${binary:Version}),
+ librust-smallvec-1.9.0+const-new-dev (= ${binary:Version}),
+ librust-smallvec-1.9.0+default-dev (= ${binary:Version}),
+ librust-smallvec-1.9.0+may-dangle-dev (= ${binary:Version}),
+ librust-smallvec-1.9.0+serde-dev (= ${binary:Version}),
+ librust-smallvec-1.9.0+specialization-dev (= ${binary:Version}),
+ librust-smallvec-1.9.0+union-dev (= ${binary:Version}),
+ librust-smallvec-1.9.0+write-dev (= ${binary:Version})
+Description: Store up to a small number of items on the stack - Rust source code
+ This package contains the source for the Rust smallvec crate, packaged by
+ debcargo for use with cargo and dh-cargo.
